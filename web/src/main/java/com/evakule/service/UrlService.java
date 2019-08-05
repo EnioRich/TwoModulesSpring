@@ -8,4 +8,6 @@ import java.util.Optional;
 public interface UrlService {
 
     Optional<List<Url>> getAll();
+
+    Url addUrl(Url url);
 }

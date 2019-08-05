@@ -18,4 +18,10 @@ public class UrlServiceImpl implements UrlService{
     public Optional<List<Url>> getAll() {
         return Optional.of(urlRepository.findAll());
     }
+
+    @Override
+    public Url addUrl(Url url) {
+        url.setStatus("404");
+        return urlRepository.save(url);
+    }
 }
